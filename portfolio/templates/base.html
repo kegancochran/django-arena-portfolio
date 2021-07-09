@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="{% url 'project_index' %}">RP Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,12 +17,22 @@
         </div>
     </div>
 
-</nav>
+</nav> -->
 
-<div class="container">
+<link rel="stylesheet" href="https://unpkg.com/tachyons@4.8.1/css/tachyons.min.css">
+
+<main class="bg-black">
+  <nav class="pa3 pa4-ns helvetica">
+    <a class="link dim white b f1 f-headline-ns tc db mb3 mb4-ns" href="{% url 'home' %}" title="Home">Kegan&rsquo;s Django Playground</a>
+    <div class="tc pb3">
+      <a class="ttu tracked link dim gray f6 f5-ns dib mr3" href="{% url 'home' %}" title="Home">Home</a>
+      <a class="ttu tracked link dim gray f6 f5-ns dib mr3" href="{% url 'project_index' %}" title="Projects">Projects</a>
+      <a class="ttu tracked link dim gray f6 f5-ns dib mr3" href="{% url 'blog_index' %}" title="Blog">Blog</a>
+      <a class="ttu tracked link dim gray f6 f5-ns dib" href="#" title="Contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
     {% block page_content %}{% endblock %}
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </div>
+</main>

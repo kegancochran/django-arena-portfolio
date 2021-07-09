@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
+<!-- <div class="col-md-8 offset-md-2">
     <h1>{{ post.title }}</h1>
     <small>
         {{ post.created_on.date }} |&nbsp;
@@ -32,5 +33,11 @@
     <p>{{ comment.body }}</p>
     <hr>
     {% endfor %}
+</div> -->
+<div class="">
+    <article class="helvetica pa3 pa5-ns white-80">
+        <h1 class="f1 f1-m f-title-l">{{ post.title }}</h1>
+        <h3 class="f3 fw4 measure lh-copy">{{ post.body | linebreaks }}</h3>
+    </article>
 </div>
 {% endblock %}
