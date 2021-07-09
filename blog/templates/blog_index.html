@@ -1,6 +1,7 @@
 {% extends "base.html" %}
+{% load static %}
 {% block page_content %}
-<div class="col-md-8 offset-md-2">
+<!-- <div class="col-md-8 offset-md-2">
     <h1>Blog Index</h1>
     <hr>
     {% for post in posts %}
@@ -16,5 +17,23 @@
     </small>
     <p>{{ post.body | slice:":400" }}...</p>
     {% endfor %}
-</div>
+</div> -->
+
+<section class="tc mw6 center helvetica white-80">
+    <h1 class="f6 f5-ns ttu tracked-mega lh-solid">Blog</h1>
+    {% for post in posts %}
+    <article class="">
+        <a class="db pv4 ph3 ph0-l no-underline white-80 dim" href="{% url 'blog_detail' post.pk%}">
+          <div class="flex flex-column flex-row-ns">
+            <div class="w-100">
+                <h1 class="f-title mt0 lh-title">{{ post.title }}</h1>
+                <p class="f6 f5-l lh-copy">{{ post.body | slice:":250" }}...</p>
+                <p class="f6 lh-copy mv0"> {{ post.author }} | {{ post.created_on.date }}</p>
+            </div>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+</section>
+
 {% endblock %}
