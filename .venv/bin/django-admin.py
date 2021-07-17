@@ -1,4 +1,4 @@
-#!/Users/kegan/Documents/The Folder/django-portfolio/.venv/bin/python
+#!/Users/kegancochran/Documents/GitHub/django-portfolio/.venv/bin/python3
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 
